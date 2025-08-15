@@ -13,7 +13,7 @@
                         risiko.</p>
                     <div class="hero-buttons">
                         <a href="{{ route('data-pribadi') }}" class="btn-primary">Mulai Deteksi</a>
-                        <a href="link-yang-dituju" class="btn-outline">Pelajari Lebih Lanjut</a>
+                        <a href="#" class="btn-outline">Pelajari Lebih Lanjut</a>
                     </div>
                 </div>
                 <div class="hero-image">
@@ -76,12 +76,8 @@
                 <h2 class="form-title">Pengukuran Fisik</h2>
                 <div class="form-grid">
                     <div class="form-group">
-                        <label>Berat Badan (kg)</label>
-                        <input type="number" name="berat_badan">
-                    </div>
-                    <div class="form-group">
-                        <label>Tinggi Badan (cm)</label>
-                        <input type="number" name="tinggi_badan">
+                        <label>Aktivitas</label>
+                        <input type="text" name="aktivitas">
                     </div>
                     <div class="form-group">
                         <label>Index Massa Tubuh</label>
@@ -89,10 +85,7 @@
                     </div>
                     <div class="form-group">
                         <label>Tekanan Darah (mmHg)</label>
-                        <div class="blood-pressure-group">
-                            <input type="number" name="sistol" placeholder="Sistol">
-                            <input type="number" name="diastol" placeholder="Diastol">
-                        </div>
+                        <input type="text" name="tekanan_darah" placeholder="contoh: 150/90">
                     </div>
                 </div>
                 <div class="form-actions" style="justify-content: space-between;">
@@ -124,8 +117,8 @@
 
                     <!-- Hasil Laboratorium -->
                     <div class="form-group">
-                        <label>Hasil Laboratorium Terbaru</label>
-                        <input type="number" name="gula_darah" placeholder="Gula darah acak (mg/dL)">
+                        <label>Gula Darah</label>
+                        <input type="number" name="gula_darah" placeholder="Gula darah (mg/dL)">
                     </div>
 
                     <!-- Pertanyaan 2 -->

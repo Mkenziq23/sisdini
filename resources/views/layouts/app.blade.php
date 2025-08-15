@@ -11,6 +11,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
+    {{-- Sweetalert2 --}}
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     @stack('styles')
 </head>
 
@@ -79,6 +82,43 @@
             document.getElementById('step-2').style.display = 'block';
         });
     </script> --}}
+
+    <script>
+        // Alert sukses
+        @if (session('success'))
+            Swal.fire({
+                icon: 'success',
+                title: 'Sukses!',
+                text: "{{ session('success') }}",
+                timer: 2000,
+                showConfirmButton: false
+            });
+        @endif
+
+        // Alert error dari validasi atau flash session
+        @if ($errors->any() || session('error'))
+            let errorMessages = '';
+
+            // Error dari validasi
+            @foreach ($errors->all() as $error)
+                errorMessages += "<p>{{ $error }}</p>";
+            @endforeach
+
+            // Error dari session
+            @if (session('error'))
+                errorMessages += "<p>{{ session('error') }}</p>";
+            @endif
+
+            Swal.fire({
+                icon: 'error',
+                title: 'Gagal!',
+                html: errorMessages,
+                confirmButtonColor: '#1c55ab'
+            });
+        @endif
+    </script>
+
+
 
     <script>
         const totalSteps = 3;

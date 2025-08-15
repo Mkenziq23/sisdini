@@ -13,7 +13,7 @@
                         risiko.</p>
                     <div class="hero-buttons">
                         <a href="{{ route('data-pribadi') }}" class="btn-primary">Mulai Deteksi</a>
-                        <a href="link-yang-dituju" class="btn-outline">Pelajari Lebih Lanjut</a>
+                        <a href="#" class="btn-outline">Pelajari Lebih Lanjut</a>
                     </div>
                 </div>
                 <div class="hero-image">

@@ -14,15 +14,23 @@ class Deteksi extends Model
     protected $fillable = [
         'nama',
         'usia',
+        'usia_val',
         'jenis_kelamin',
+        'jk_val',
         'telepon',
-        'berat_badan',
-        'tinggi_badan',
+        'aktivitas',
+        'aktivitas_val',
         'imt',
-        'sistol',
-        'diastol',
+        'imt_val',
+        'tekanan_darah',
+        'td_val',
         'hipertensi',
+        'hipertensi_val',
         'gula_darah',
+        'gula_darah_val',
         'kardiovaskular',
+        'kardio_val',
+        'hasil'
     ];
 }
+

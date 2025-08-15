@@ -15,18 +15,26 @@ return new class extends Migration
             $table->id();
             $table->string('nama');
             $table->integer('usia');
-            $table->string('jenis_kelamin');
+            $table->integer('usia_val');
+            $table->string('jenis_kelamin'); // input asli (string)
+            $table->integer('jk_val'); // hasil konversi ke angka
             $table->string('telepon')->nullable();
-            $table->decimal('berat_badan', 5, 2)->nullable();
-            $table->decimal('tinggi_badan', 5, 2)->nullable();
-            $table->decimal('imt', 5, 2)->nullable();
-            $table->integer('sistol')->nullable();
-            $table->integer('diastol')->nullable();
-            $table->string('hipertensi')->nullable();
-            $table->decimal('gula_darah', 5, 2)->nullable();
-            $table->string('kardiovaskular')->nullable();
+            $table->string('aktivitas')->nullable(); // input asli (string)
+            $table->integer('aktivitas_val')->nullable(); // hasil kategori
+            $table->string('imt')->nullable();
+            $table->integer('imt_val')->nullable();
+            $table->string('tekanan_darah')->nullable();
+            $table->integer('td_val')->nullable();
+            $table->string('hipertensi')->nullable(); // input asli
+            $table->integer('hipertensi_val')->nullable();
+            $table->double('gula_darah')->nullable(); // input asli
+            $table->integer('gula_darah_val')->nullable();
+            $table->string('kardiovaskular')->nullable(); // input asli
+            $table->integer('kardio_val')->nullable();
+            $table->string('hasil');
             $table->timestamps();
         });
+
     }
 
     /**
