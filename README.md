@@ -30,7 +30,7 @@ Sistem ini dirancang untuk membantu **mendeteksi faktor risiko kesehatan** pengg
 Berikut contoh tampilan halaman dari sistem:
 
 ### 1. Halaman Home
-![Home](screenshots/home.png)
+![Home] (https://github.com/Mkenziq23/sisdini/blob/main/public/screenshoots/Home.png)
 
 ### 2. Halaman About / Tentang
 ![About](screenshots/about.png)
