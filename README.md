@@ -30,35 +30,34 @@ Sistem ini dirancang untuk membantu **mendeteksi faktor risiko kesehatan** pengg
 Berikut contoh tampilan halaman dari sistem:
 
 ### 1. Halaman Home
-![Home](public/img/screenshots/home.png)
+![Home](./public/img/screenshots/home.png)
 
 ### 2. Halaman About / Tentang
-![About](public/img/screenshots/about.png)
+![About](./public/img/screenshots/about.png)
 
 ### 3. Halaman Informasi
-![Information](public/img/screenshots/information.png)
+![Information](./public/img/screenshots/information.png)
 
 ### 4. Halaman Kontak
-![Contact](public/img/screenshots/contact.png)
+![Contact](./public/img/screenshots/contact.png)
 
 ### 5. Halaman Deteksi Risiko
-![Deteksi](public/img/screenshots/deteksi.png)
+![Deteksi](./public/img/screenshots/deteksi.png)
 
 ### 6. Halaman Hasil Deteksi
-![Hasil Deteksi](public/img/screenshots/hasil.png)
+![Hasil Deteksi](./public/img/screenshots/hasil.png)
 
 ### 7. Halaman Dashboard
-![Dashboard](public/img/screenshots/dashboard.png)
+![Dashboard](./public/img/screenshots/dashboard.png)
 
 ### 8. Halaman Dashboard Hasil Deteksi
-![Dashboard](public/img/screenshots/hasil-deteksi.png)
+![Hasil Dashboard](./public/img/screenshots/hasil-deteksi.png)
 
 ### 9. Halaman Dashboard Kelola Pesan
-![Contact](public/img/screenshots/kelola-pesan.png)
+![Kelola Pesan](./public/img/screenshots/kelola-pesan.png)
 
 ### 10. Halaman Dashboard Kelola Akun
-![Kelola Akun](public/img/screenshots/kelola-akun.png)
-
+![Kelola Akun](./public/img/screenshots/kelola-akun.png)
 
 ---
 
