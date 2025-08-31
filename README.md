@@ -30,34 +30,34 @@ Sistem ini dirancang untuk membantu **mendeteksi faktor risiko kesehatan** pengg
 Berikut contoh tampilan halaman dari sistem:
 
 ### 1. Halaman Home
-![Home](img/screenshots/home.png)
+![Home](/screenshots/home.png)
 
 ### 2. Halaman About / Tentang
-![About](img/screenshots/about.png)
+![About](/screenshots/about.png)
 
 ### 3. Halaman Informasi
-![Information](img/screenshots/information.png)
+![Information](/screenshots/information.png)
 
 ### 4. Halaman Kontak
-![Contact](img/screenshots/contact.png)
+![Contact](/screenshots/contact.png)
 
 ### 5. Halaman Deteksi Risiko
-![Deteksi](img/screenshots/deteksi.png)
+![Deteksi](/screenshots/deteksi.png)
 
 ### 6. Halaman Hasil Deteksi
-![Hasil Deteksi](img/screenshots/hasil.png)
+![Hasil Deteksi](/screenshots/hasil.png)
 
 ### 7. Halaman Dashboard
-![Dashboard](img/screenshots/dashboard.png)
+![Dashboard](/screenshots/dashboard.png)
 
 ### 8. Halaman Dashboard Hasil Deteksi
-![Hasil Dashboard](img/screenshots/hasil-deteksi.png)
+![Hasil Dashboard](/screenshots/hasil-deteksi.png)
 
 ### 9. Halaman Dashboard Kelola Pesan
-![Kelola Pesan](img/screenshots/kelola-pesan.png)
+![Kelola Pesan](/screenshots/kelola-pesan.png)
 
 ### 10. Halaman Dashboard Kelola Akun
-![Kelola Akun](img/screenshots/kelola-akun.png)
+![Kelola Akun](/screenshots/kelola-akun.png)
 
 ---
 
