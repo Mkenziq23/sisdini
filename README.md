@@ -18,8 +18,6 @@ Sistem ini dirancang untuk membantu **mendeteksi faktor risiko kesehatan** pengg
 
 ## Tampilan Halaman
 
-Berikut contoh tampilan halaman dari sistem (2 kolom per baris):
-
 | ![Home](https://github.com/Mkenziq23/sisdini/blob/main/public/screenshoots/Home.png) | ![About](https://github.com/Mkenziq23/sisdini/blob/main/public/screenshoots/about.png) |
 |:---:|:---:|
 | **1. Halaman Home** | **2. Halaman About / Tentang** |
