@@ -33,31 +33,31 @@ Berikut contoh tampilan halaman dari sistem:
 ![Home](https://github.com/Mkenziq23/sisdini/blob/main/public/screenshoots/Home.png)
 
 ### 2. Halaman About / Tentang
-![About](screenshots/about.png)
+![About](https://github.com/Mkenziq23/sisdini/blob/main/public/screenshoots/about.png)
 
 ### 3. Halaman Informasi
-![Information](screenshots/information.png)
+![Information](https://github.com/Mkenziq23/sisdini/blob/main/public/screenshoots/information.png)
 
 ### 4. Halaman Kontak
-![Contact](screenshots/contact.png)
+![Contact](https://github.com/Mkenziq23/sisdini/blob/main/public/screenshoots/contact.png)
 
 ### 5. Halaman Deteksi Risiko
-![Deteksi](screenshots/deteksi.png)
+![Deteksi](https://github.com/Mkenziq23/sisdini/blob/main/public/screenshoots/deteksi.png)
 
 ### 6. Halaman Hasil Deteksi
-![Hasil Deteksi](screenshots/hasil.png)
+![Hasil Deteksi](https://github.com/Mkenziq23/sisdini/blob/main/public/screenshoots/hasil.png)
 
 ### 7. Halaman Dashboard
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](https://github.com/Mkenziq23/sisdini/blob/main/public/screenshoots/dashboard.png)
 
 ### 8. Halaman Dashboard Hasil Deteksi
-![Hasil Dashboard](screenshots/hasil-deteksi.png)
+![Hasil Dashboard](https://github.com/Mkenziq23/sisdini/blob/main/public/screenshoots/hasil-deteksi.png)
 
 ### 9. Halaman Dashboard Kelola Pesan
-![Kelola Pesan](screenshots/kelola-pesan.png)
+![Kelola Pesan](https://github.com/Mkenziq23/sisdini/blob/main/public/screenshoots/kelola-pesan.png)
 
 ### 10. Halaman Dashboard Kelola Akun
-![Kelola Akun](screenshots/kelola-akun.png)
+![Kelola Akun](https://github.com/Mkenziq23/sisdini/blob/main/public/screenshoots/kelola-akun.png)
 
 
 ---
