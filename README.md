@@ -6,65 +6,81 @@ Sistem ini dirancang untuk membantu **mendeteksi faktor risiko kesehatan** pengg
 
 ## Fitur Utama
 
-1. **Form Deteksi Risiko**
-   - Pengguna dapat memasukkan data seperti usia, jenis kelamin, tinggi badan, berat badan, tekanan darah, aktivitas, gula darah, hipertensi, dan kardiovaskular.
-   
-2. **Analisis Data**
-   - Sistem menganalisis data dan menentukan apakah pengguna **Berisiko** atau **Tidak Berisiko** berdasarkan beberapa kriteria yang sudah ditentukan.
-   
-3. **Hasil Diagnosa**
-   - Menampilkan hasil rekomendasi secara jelas.
-   - Hasil dapat dicetak dalam format PDF.
-   
-4. **Halaman Informasi**
-   - Memberikan informasi umum terkait aplikasi dan panduan penggunaan.
-
-5. **Halaman Kontak**
-   - Pengguna dapat mengirim pertanyaan atau saran melalui form kontak.
-   - Semua pesan disimpan dalam database untuk pengelolaan.
+| Fitur | Deskripsi |
+|-------|-----------|
+| **Form Deteksi Risiko** | Pengguna dapat memasukkan data seperti usia, jenis kelamin, tinggi badan, berat badan, tekanan darah, aktivitas, gula darah, hipertensi, dan kardiovaskular. |
+| **Analisis Data** | Sistem menganalisis data dan menentukan apakah pengguna **Berisiko** atau **Tidak Berisiko** berdasarkan beberapa kriteria yang sudah ditentukan. |
+| **Hasil Diagnosa** | Menampilkan hasil rekomendasi secara jelas dan bisa dicetak dalam format PDF. |
+| **Halaman Informasi** | Memberikan informasi umum terkait aplikasi dan panduan penggunaan. |
+| **Halaman Kontak** | Pengguna dapat mengirim pertanyaan atau saran melalui form kontak, dan semua pesan disimpan dalam database. |
 
 ---
 
-## Struktur Halaman
+## Tampilan Halaman
 
 Berikut contoh tampilan halaman dari sistem:
 
-### 1. Halaman Home
+<div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+
+<div style="flex: 1 1 45%; text-align: center;">
+**1. Halaman Home**  
 ![Home](https://github.com/Mkenziq23/sisdini/blob/main/public/screenshoots/Home.png)
+</div>
 
-### 2. Halaman About / Tentang
+<div style="flex: 1 1 45%; text-align: center;">
+**2. Halaman About / Tentang**  
 ![About](https://github.com/Mkenziq23/sisdini/blob/main/public/screenshoots/about.png)
+</div>
 
-### 3. Halaman Informasi
+<div style="flex: 1 1 45%; text-align: center;">
+**3. Halaman Informasi**  
 ![Information](https://github.com/Mkenziq23/sisdini/blob/main/public/screenshoots/information.png)
+</div>
 
-### 4. Halaman Kontak
+<div style="flex: 1 1 45%; text-align: center;">
+**4. Halaman Kontak**  
 ![Contact](https://github.com/Mkenziq23/sisdini/blob/main/public/screenshoots/contact.png)
+</div>
 
-### 5. Halaman Deteksi Risiko
+<div style="flex: 1 1 45%; text-align: center;">
+**5. Halaman Deteksi Risiko**  
 ![Deteksi](https://github.com/Mkenziq23/sisdini/blob/main/public/screenshoots/deteksi.png)
+</div>
 
-### 6. Halaman Hasil Deteksi
+<div style="flex: 1 1 45%; text-align: center;">
+**6. Halaman Hasil Deteksi**  
 ![Hasil Deteksi](https://github.com/Mkenziq23/sisdini/blob/main/public/screenshoots/hasil.png)
+</div>
 
-### 7. Halaman Dashboard
+<div style="flex: 1 1 45%; text-align: center;">
+**7. Halaman Dashboard**  
 ![Dashboard](https://github.com/Mkenziq23/sisdini/blob/main/public/screenshoots/dashboard.png)
+</div>
 
-### 8. Halaman Dashboard Hasil Deteksi
+<div style="flex: 1 1 45%; text-align: center;">
+**8. Halaman Dashboard Hasil Deteksi**  
 ![Hasil Dashboard](https://github.com/Mkenziq23/sisdini/blob/main/public/screenshoots/hasil-deteksi.png)
+</div>
 
-### 9. Halaman Dashboard Kelola Pesan
+<div style="flex: 1 1 45%; text-align: center;">
+**9. Halaman Dashboard Kelola Pesan**  
 ![Kelola Pesan](https://github.com/Mkenziq23/sisdini/blob/main/public/screenshoots/kelola-pesan.png)
+</div>
 
-### 10. Halaman Dashboard Kelola Akun
+<div style="flex: 1 1 45%; text-align: center;">
+**10. Halaman Dashboard Kelola Akun**  
 ![Kelola Akun](https://github.com/Mkenziq23/sisdini/blob/main/public/screenshoots/kelola-akun.png)
+</div>
 
+</div>
 
 ---
 
-## Instalasi
+## Instalasi & Penggunaan
 
-1. Clone repository:
+Ikuti langkah berikut untuk menjalankan sistem di lokal:
+
+### 1. Clone Repository
 ```bash
 git clone https://github.com/username/project-name.git
 cd project-name
