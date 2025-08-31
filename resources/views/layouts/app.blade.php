@@ -40,10 +40,20 @@
             <!-- Menu -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="#">Beranda</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Tentang</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Informasi</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Kontak</a></li>
+                    <a class="nav-link {{ request()->routeIs('home') ? 'active' : '' }}" href="{{ route('home') }}">
+                        Beranda
+                    </a>
+                    <a class="nav-link {{ request()->routeIs('about') ? 'active' : '' }}" href="{{ route('about') }}">
+                        Tentang
+                    </a>
+                    <a class="nav-link {{ request()->routeIs('information') ? 'active' : '' }}"
+                        href="{{ route('information') }}">
+                        Informasi
+                    </a>
+                    <a class="nav-link {{ request()->routeIs('contact') ? 'active' : '' }}"
+                        href="{{ route('contact') }}">
+                        Kontak
+                    </a>
                 </ul>
             </div>
         </div>

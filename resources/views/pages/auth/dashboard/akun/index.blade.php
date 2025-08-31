@@ -94,6 +94,12 @@
             <hr class="sidebar-divider">
 
 
+            <li class="nav-item {{ request()->routeIs('kelola-pesan') ? 'active' : '' }}">
+                <a class="nav-link" href="{{ route('kelola-pesan') }}">
+                    <i class="fas fa-fw fa-envelope"></i>
+                    <span>Kelola Pesan</span>
+                </a>
+            </li>
             <!-- Nav Item - Charts -->
             <li class="nav-item {{ request()->routeIs('kelola-akun') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('kelola-akun') }}">

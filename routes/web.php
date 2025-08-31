@@ -23,6 +23,10 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('about', [HomeController::class, 'about'])->name('about');
+Route::get('information', [HomeController::class, 'information'])->name('information');
+Route::get('contact', [HomeController::class, 'contact'])->name('contact');
+Route::post('contact', [HomeController::class, 'contactStore'])->name('contactStore');
 Route::get('Data-Pribadi', [DataPribadiController::class, 'index'])->name('data-pribadi');
 Route::get('hasil', [DeteksiController::class, 'index'])->name('hasil');
 Route::post('deteksi', [DeteksiController::class, 'store'])->name('deteksi.store');
@@ -48,5 +52,9 @@ Route::middleware(['auth', 'role:admin,dokter'])->group(function () {
     Route::get('/kelola-akun/{id}/edit', [DashboardController::class, 'EditAkun'])->name('kelola-akun.edit');
     Route::put('/kelola-akun/{id}', [DashboardController::class, 'UpdateAkun'])->name('kelola-akun.update');
     Route::delete('/kelola-akun/{id}', [DashboardController::class, 'DeleteAkun'])->name('kelola-akun.delete');
+    Route::get('/kelola-pesan', [DashboardController::class, 'KelolaPesan'])->name('kelola-pesan');
+    Route::delete('/kelola-pesan/{id}', [DashboardController::class, 'DeletePesan'])->name('kelola-pesan.delete');
+
+
 });
 

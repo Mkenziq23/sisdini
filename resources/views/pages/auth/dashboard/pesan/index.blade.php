@@ -20,9 +20,6 @@
     </title>
 
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
@@ -97,21 +94,19 @@
             <hr class="sidebar-divider">
 
 
+            <!-- Nav Item - Charts -->
             <li class="nav-item {{ request()->routeIs('kelola-pesan') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('kelola-pesan') }}">
                     <i class="fas fa-fw fa-envelope"></i>
                     <span>Kelola Pesan</span>
                 </a>
             </li>
-            <!-- Nav Item - Charts -->
             <li class="nav-item {{ request()->routeIs('kelola-akun') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('kelola-akun') }}">
                     <i class="fas fa-fw fa-user-cog"></i>
                     <span>Kelola Akun</span>
                 </a>
             </li>
-
-
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
@@ -187,8 +182,7 @@
                                     Settings
                                 </a> --}}
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal"
-                                    data-target="#logoutModal">
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
                                 </a>
@@ -199,11 +193,11 @@
 
                 </nav>
                 <!-- End of Topbar -->
-
                 <div class="container-fluid">
+
                     <div class="card shadow mb-4">
                         <div class="card-header py-3 bg-primary text-white">
-                            <h6 class="m-0 font-weight-bold">Hasil Deteksi</h6>
+                            <h6 class="m-0 font-weight-bold">Kelola Pesan Masuk</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive" style="overflow-x:auto;">
@@ -212,49 +206,25 @@
                                     <thead class="thead-light">
                                         <tr>
                                             <th>Nama</th>
-                                            <th>Usia</th>
-                                            <th>JK</th>
-                                            <th>Telp</th>
-                                            <th>Aktivitas</th>
-                                            <th>IMT</th>
-                                            <th>TD</th>
-                                            <th>Hipert.</th>
-                                            <th>GD</th>
-                                            <th>Kardio</th>
-                                            <th>Hasil</th>
-                                            <th>Tgl</th>
+                                            <th>Email</th>
+                                            <th>Subjek</th>
+                                            <th>Pesan</th>
+                                            <th>Tanggal Pesan</th>
                                             <th>Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach ($deteksi as $item)
+                                        @foreach ($kelolaPesan as $item)
                                             <tr>
                                                 <td class="text-left">{{ $item->nama }}</td>
-                                                <td>{{ $item->usia }}</td>
-                                                <td>
-                                                    <span
-                                                        class="badge {{ $item->jenis_kelamin === 'Perempuan' ? 'badge-danger' : 'badge-info' }}">
-                                                        {{ $item->jenis_kelamin === 'Perempuan' ? 'P' : 'L' }}
-                                                    </span>
-                                                </td>
-                                                <td>{{ $item->telepon ?? '-' }}</td>
-                                                <td>{{ $item->aktivitas ?? '-' }}</td>
-                                                <td>{{ $item->imt ?? '-' }}</td>
-                                                <td>{{ $item->tekanan_darah ?? '-' }}</td>
-                                                <td>{{ $item->hipertensi ?? '-' }}</td>
-                                                <td>{{ $item->gula_darah ?? '-' }}</td>
-                                                <td>{{ $item->kardiovaskular ?? '-' }}</td>
-                                                <td>
-                                                    <span
-                                                        class="badge {{ $item->hasil === 'Berisiko' ? 'badge-danger' : 'badge-success' }}">
-                                                        {{ $item->hasil }}
-                                                    </span>
-                                                </td>
+                                                <td>{{ $item->email }}</td>
+                                                <td>{{ $item->subjek }}</td>
+                                                <td>{{ $item->pesan }}</td>
                                                 <td>{{ $item->created_at->format('d/m/Y') }}</td>
                                                 <td>
-                                                    <form action="{{ route('hasil-deteksi.delete', $item->id) }}"
-                                                        method="POST"
-                                                        onsubmit="return confirm('Yakin ingin menghapus data ini?');">
+                                                    <form action="{{ route('kelola-pesan.delete', $item->id) }}"
+                                                        method="POST" class="d-inline"
+                                                        onsubmit="return confirm('Yakin ingin menghapus pesan ini?');">
                                                         @csrf
                                                         @method('DELETE')
                                                         <button type="submit" class="btn btn-sm btn-danger">

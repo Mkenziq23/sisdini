@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Deteksi;
+use App\Models\Kontak;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -256,6 +257,21 @@ class DashboardController extends Controller
 
         return redirect()->route('kelola-akun')->with('success', 'Akun berhasil dihapus.');
     }
+
+    public function KelolaPesan() {
+        $kelolaPesan = Kontak::all();
+        return view('pages.auth.dashboard.pesan.index', compact('kelolaPesan'));
+        
+    }
+
+    public function DeletePesan($id) {
+        $pesan = Kontak::findOrFail($id);
+        $pesan->delete();
+
+        return redirect()->route('kelola-pesan')->with('success', 'Pesan berhasil dihapus.');
+    }
+
+    
 
 
 }
