@@ -21,6 +21,8 @@ return new class extends Migration
             $table->string('telepon')->nullable();
             $table->string('aktivitas')->nullable(); // input asli (string)
             $table->integer('aktivitas_val')->nullable(); // hasil kategori
+            $table->integer('tinggi_badan')->nullable();
+            $table->integer('berat_badan')->nullable();
             $table->string('imt')->nullable();
             $table->integer('imt_val')->nullable();
             $table->string('tekanan_darah')->nullable();

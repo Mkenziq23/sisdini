@@ -26,6 +26,9 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('Data-Pribadi', [DataPribadiController::class, 'index'])->name('data-pribadi');
 Route::get('hasil', [DeteksiController::class, 'index'])->name('hasil');
 Route::post('deteksi', [DeteksiController::class, 'store'])->name('deteksi.store');
+Route::get('hasil/cetak', [DeteksiController::class, 'cetak'])->name('hasil.cetak');
+Route::get('hasil/download', [DeteksiController::class, 'download'])->name('hasil.download');
+
 
 Route::get('login', [AuthController::class, 'showLogin'])->name('login');
 Route::post('login', [AuthController::class, 'login']);

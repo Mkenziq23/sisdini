@@ -41,10 +41,18 @@
                         <label>Nama Lengkap</label>
                         <input type="text" name="nama">
                     </div>
+
                     <div class="form-group">
-                        <label>Usia</label>
-                        <input type="number" name="usia">
+                        <label for="usia" class="font-weight-bold">Usia</label>
+                        <input type="number" name="usia" id="usia" class="form-control"
+                            placeholder="Masukkan usia (tahun)" required>
+
+                        <!-- Hasil kategori usia (hanya tampilan, tidak masuk database) -->
+                        <div id="kategori-box" class="mt-3" style="display: none;">
+                            <div class="alert" id="kategori-usia" role="alert"></div>
+                        </div>
                     </div>
+
                     <div class="form-group">
                         <label>Jenis Kelamin</label>
                         <select name="jenis_kelamin">
@@ -77,17 +85,31 @@
                 <div class="form-grid">
                     <div class="form-group">
                         <label>Aktivitas</label>
-                        <input type="text" name="aktivitas">
+                        <select name="aktivitas" required>
+                            <option value="">-- Pilih Aktivitas --</option>
+                            <option value="cukup">Cukup</option>
+                            <option value="kurang">Kurang</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Tinggi Badan (cm)</label>
+                        <input type="number" step="0.1" name="tinggi_badan" id="tinggi_badan"
+                            placeholder="contoh: 170">
+                    </div>
+                    <div class="form-group">
+                        <label>Berat Badan (kg)</label>
+                        <input type="number" step="0.1" name="berat_badan" id="berat_badan" placeholder="contoh: 65">
                     </div>
                     <div class="form-group">
                         <label>Index Massa Tubuh</label>
-                        <input type="number" step="0.01" name="imt">
+                        <input type="number" step="0.01" name="imt" id="imt" readonly>
                     </div>
                     <div class="form-group">
                         <label>Tekanan Darah (mmHg)</label>
                         <input type="text" name="tekanan_darah" placeholder="contoh: 150/90">
                     </div>
                 </div>
+
                 <div class="form-actions" style="justify-content: space-between;">
                     <button type="button" class="btn-secondary" id="prev-btn-2">Sebelumnya</button>
                     <button type="button" class="btn-primary-next" id="next-btn-2">Selanjutnya</button>
@@ -118,7 +140,12 @@
                     <!-- Hasil Laboratorium -->
                     <div class="form-group">
                         <label>Gula Darah</label>
-                        <input type="number" name="gula_darah" placeholder="Gula darah (mg/dL)">
+                        <input type="number" name="gula_darah" placeholder="Gula darah (mg/dL)" min="0">
+                        <small class="form-text text-muted">
+                            Masukkan hasil pemeriksaan gula darah dalam satuan mg/dL.
+                            Nilai normal biasanya berkisar antara <strong>70–140 mg/dL</strong>.
+                            Konsultasikan ke dokter jika hasil jauh di luar rentang normal.
+                        </small>
                     </div>
 
                     <!-- Pertanyaan 2 -->
@@ -197,4 +224,64 @@
         </section>
     </div>
 
+
+    <script>
+        document.getElementById('usia').addEventListener('input', function() {
+            let usia = parseInt(this.value);
+            let kategori = '';
+            let warna = 'alert-secondary'; // default warna
+
+            if (isNaN(usia) || usia <= 0) {
+                document.getElementById('kategori-box').style.display = 'none';
+                return;
+            } else if (usia < 18) {
+                kategori = 'Anak-anak / Remaja';
+                warna = 'alert-info';
+            } else if (usia >= 18 && usia <= 40) {
+                kategori = 'Dewasa Awal';
+                warna = 'alert-success';
+            } else if (usia >= 41 && usia <= 59) {
+                kategori = 'Dewasa Akhir';
+                warna = 'alert-primary';
+            } else if (usia >= 60 && usia <= 74) {
+                kategori = 'Lansia Awal';
+                warna = 'alert-warning';
+            } else if (usia >= 75 && usia <= 90) {
+                kategori = 'Lansia Akhir';
+                warna = 'alert-danger';
+            } else if (usia > 90) {
+                kategori = 'Manula';
+                warna = 'alert-dark';
+            }
+
+            let kategoriBox = document.getElementById('kategori-box');
+            let kategoriUsia = document.getElementById('kategori-usia');
+
+            kategoriBox.style.display = 'block';
+            kategoriUsia.textContent = kategori;
+            kategoriUsia.className = `alert ${warna}`;
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const tinggiInput = document.getElementById("tinggi_badan");
+            const beratInput = document.getElementById("berat_badan");
+            const imtInput = document.getElementById("imt");
+
+            function hitungIMT() {
+                let tinggi = parseFloat(tinggiInput.value);
+                let berat = parseFloat(beratInput.value);
+
+                if (!isNaN(tinggi) && !isNaN(berat) && tinggi > 0) {
+                    let tinggiMeter = tinggi / 100;
+                    let imt = berat / (tinggiMeter * tinggiMeter);
+                    imtInput.value = imt.toFixed(2);
+                } else {
+                    imtInput.value = "";
+                }
+            }
+
+            tinggiInput.addEventListener("input", hitungIMT);
+            beratInput.addEventListener("input", hitungIMT);
+        });
+    </script>
 @endsection

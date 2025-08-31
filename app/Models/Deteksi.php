@@ -20,6 +20,8 @@ class Deteksi extends Model
         'telepon',
         'aktivitas',
         'aktivitas_val',
+        'tinggi_badan',
+        'berat_badan',
         'imt',
         'imt_val',
         'tekanan_darah',

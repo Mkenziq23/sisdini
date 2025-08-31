@@ -44,7 +44,7 @@
                          if (strtolower(trim($latest->hasil)) === 'tidak berisiko') {
                              $width = '50%'; // Tengah
                              $color = '#27ae60'; // Hijau
-                         } elseif (strtolower(trim($latest->hasil)) === 'beresiko') {
+                         } elseif (strtolower(trim($latest->hasil)) === 'berisiko') {
                              $width = '100%'; // Penuh
                              $color = '#e74c3c'; // Merah
                          } else {
@@ -79,7 +79,7 @@
                          Faktor Risiko Teridentifikasi
                      </h3>
                      <ul>
-                         <li class="@if ($latest->imt == 2) check @else not @endif">
+                         <li class="@if ($latest->imt_val == 2) check @else not @endif">
                              Berat badan berlebih
                          </li>
                          <li
@@ -89,7 +89,7 @@
                             @else not @endif">
                              Tekanan darah tinggi
                          </li>
-                         <li class="@if ($latest->kardiovaskular == 1) check @else not @endif">
+                         <li class="@if ($latest->kardio_val == 1) check @else not @endif">
                              Riwayat penyakit kardiovaskuler
                          </li>
                      </ul>
@@ -102,7 +102,7 @@
                          Faktor Risiko Teridentifikasi
                      </h3>
                      <ul>
-                         <li class="@if ($latest->imt == 2) check @else not @endif">
+                         <li class="@if ($latest->imt_val == 2) check @else not @endif">
                              Konsultasikan dengan dokter untuk pemeriksaan lebih lanjut
                          </li>
                          <li
@@ -113,7 +113,7 @@
                              Lakukan pemeriksaan gula darah secara berkala
                          </li>
                          <li>
-                         <li class="@if ($latest->kardiovaskular == 1) check @else not @endif">
+                         <li class="@if ($latest->kardio_val == 1) check @else not @endif">
                              Perbaiki pola makan dengan mengurangi gula dan karbohidrat olahan
                          </li>
                      </ul>
@@ -122,7 +122,7 @@
 
              <!-- Tombol Aksi -->
              <div class="hasil-actions">
-                 <a href="#" class="btn-primary-hasil">
+                 <a href="{{ route('hasil.cetak') }}" target="_blank" class="btn-primary-hasil">
                      <img src="{{ asset('img/iconprint.png') }}" alt="Cetak" class="btn-icon">
                      Cetak Hasil
                  </a>
